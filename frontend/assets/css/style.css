@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;400;700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -7,24 +7,27 @@
     padding: 0;
 }
 body {
-    height:1300px;
-}
-h1{
+    /* height:1300px; */
+    height: auto;
     font-family: 'Be Vietnam', sans-serif;
+}
+h1{    
     font-weight: 400;
     font-size: 1.5em;
 }
 .header {
     width: 100%;
-    height: 92px;
-    font-family: 'Be Vietnam', sans-serif;
+    height: 92px;    
     font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
-    /* background: #111; */
     background: #fff;
 }
-
+.rownav{
+    max-width: 1040px;
+    height: 92px;
+    margin: 0 auto;
+}
 .nav li {    
     display: inline-block;    
     height: 92px;
@@ -32,20 +35,13 @@ h1{
   }
 .nav li a {
     display: block;
-    /* color: #FFF; */
     color: #111;
-    /* line-height: 6.4rem; */
     line-height: 92px;
     text-decoration: none;
     text-transform: lowercase;
   }
 .navItems{
     margin-left:  2vw;
-}
-.row{
-    max-width: 1040px;
-    height: 92px;
-    margin: 0 auto;
 }
 .logo{
     height: 92px;
@@ -77,13 +73,87 @@ h1{
     transition: ease .3s;
 }
 .content {
+    position: relative;
+    height: 790px;
+    width: 100%;
+}
+.title{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+/* home */
+.bkg{
     height: 602px;
     width: 100%;
     background: url(../images/coderBGSmall.jpg);
     background-size: contain;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
+.lastworks{
+    height: 418px;
+    width: 100%;
+}
+.worktitle{
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+.workrow{
+    position: relative;
+    top: 5%;
+    left: 50%;
+    width: 56%;
+    height:275px;
+    transform: translate(-50%, 0);
+}
+.work{
+    border: solid 1px #dddd;
+    display: inline-block;
+    width: 330px;
+    min-width: 200px;
+    height:255px;
+    border-radius: 5px;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.work:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.workimg{
+    width: 95%;
+    height : 66%;
+    margin: 0 auto;
+    margin-top: 7px;
+    border-radius: 3px;
+    border: 1px solid #dddd;
+}
+.workdesc{
+    width: 85%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.desc{
+    font-size: 1.1em;
+    color: #444;
+}
+.cat{
+    font-size:  0.9;
+    font-weight: 100;
+}
+
 /*tecnologias*/
+.rowtec{
+    position: relative;
+    top: 15%;
+    max-width: 1040px;
+    height: 100%;
+    margin: 0 auto;
+}
 td {
     padding-top:30px;
     padding-right:60px;
@@ -93,10 +163,18 @@ td {
     height: auto;
     object-fit: cover;
 }
-.contenttec{
-    position: relative;
-    top:10vh;
+table{
+    margin: 0 auto;
 }
-.center {
-    padding: 0 150px;
+/* footer */
+.footer{
+    height: 96px;
+    width: 100%;
+    background: #111;
+}
+.copyright{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 38px;
 }
