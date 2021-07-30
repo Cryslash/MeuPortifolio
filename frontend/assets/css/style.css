@@ -72,16 +72,6 @@ h1{
     color: #636466;
     transition: ease .3s;
 }
-.content {
-    position: relative;
-    height: 790px;
-    width: 100%;
-}
-.title{
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.3em;
-}
 /* home */
 .bkg{
     display: flex;
@@ -119,20 +109,6 @@ h1{
     background: url(../images/placeHolder.png) -80px 0 no-repeat;
     background-size: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .lastworks{
     height: 520px;
     width: 100%;
@@ -190,25 +166,33 @@ h1{
     font-weight: 100;
 }
 
+
+
 /*tecnologias*/
-.rowtec{
-    position: relative;
-    top: 15%;
-    max-width: 1040px;
-    height: 100%;
-    margin: 0 auto;
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 81vh;
+    margin: 0;    
 }
+.rowtec{
+    max-width: 1040px;
+}
+.langtitle{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
 td {
-    padding-top:30px;
-    padding-right:60px;
+    padding: 30px 30px 0;
 }
 .langlogo{
-    max-width: 96px;
+    max-width: 112px;
     height: auto;
     object-fit: cover;
-}
-table{
-    margin: 0 auto;
 }
 /* footer */
 .footer{
