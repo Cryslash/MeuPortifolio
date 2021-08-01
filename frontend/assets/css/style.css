@@ -6,25 +6,28 @@
     margin: 0;
     padding: 0;
 }
-body {
-    /* height:1300px; */
+html{
+    font-size: 62.5%;
+}
+body,html {
     height: auto;
     font-family: 'Be Vietnam', sans-serif;
 }
 h1{    
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 2.5rem;
 }
 .header {
     width: 100%;
     height: 92px;    
     font-weight: 400;
-    font-size: 1em;
-    line-height: 1.5em;
     background: #fff;
 }
-.rownav{
-    max-width: 1040px;
+.menu-toggle {
+    display:none;
+}
+.rowmenu{
+    max-width: 1024px;
     height: 92px;
     margin: 0 auto;
 }
@@ -35,8 +38,9 @@ h1{
   }
 .nav li a {
     display: block;
+    font-size: 1.6rem;
     color: #111;
-    line-height: 92px;
+    line-height: 9.2rem;
     text-decoration: none;
     text-transform: lowercase;
   }
@@ -45,9 +49,9 @@ h1{
 }
 .logo{
     height: 92px;
-    width: 62px;
-    background: url(../images/logo.jpg) 0px 8px no-repeat;
-    background-size: contain;
+    width: 90px;
+    background: url(../images/logo.png) -8px 12px no-repeat;
+    background-size: cover;
     display: block;
     float: left;
 }
@@ -72,6 +76,7 @@ h1{
     color: #636466;
     transition: ease .3s;
 }
+
 /* home */
 .bkg{
     display: flex;
@@ -95,12 +100,12 @@ h1{
     color: #fff;
 }
 .line1{
-    font-size: 4em;
+    font-size: 6.5rem;
     margin-top: 250px;
     text-shadow: #000 1px 1px 1px;
 }
 .line2{
-    font-size: 1em;
+    font-size: 2.5em;
     font-weight: 100;
 }
 .photo{
@@ -109,8 +114,10 @@ h1{
     background: url(../images/placeHolder.png) -80px 0 no-repeat;
     background-size: cover;
 }
-.lastworks{
-    height: 520px;
+.containerwworks{
+    /* height: 520px; */
+    height: auto;
+    min-height: 520px;
     width: 100%;
     display:flex;
     flex-direction: column;
@@ -119,28 +126,25 @@ h1{
 }
 .worktitle{
     font-weight: 100;
-    font-size: 1.3em;
 }
-.workrow{    
-    display: flex;
-    margin-top: 30px;
-    /* border: 1px solid #dddd; */
+.workrow{
+    width: 90%;
+    max-width: 1080px;
+    margin: 30px auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 20px;
 }
 .work{
     display: flex;
     flex-direction: column;
     align-items: center;
     border: solid 1px #dddd;
-    width: 330px;
-    min-width: 200px;
     height:255px;
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-}
-.work:nth-child(2){
-    margin: 0 20px;
 }
 .work:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -158,15 +162,13 @@ h1{
     margin-top: 10px;
 }
 .desc{
-    font-size: 1.1em;
+    font-size: 1.7rem;
     color: #444;
 }
 .cat{
-    font-size:  0.9;
+    font-size:  1.4rem;
     font-weight: 100;
 }
-
-
 
 /*tecnologias*/
 .content {
@@ -178,12 +180,12 @@ h1{
     margin: 0;    
 }
 .rowtec{
-    max-width: 1040px;
+    max-width: 1024px;
 }
 .langtitle{
     text-align: center;
     font-weight: 300;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
 }
 
 td {
@@ -194,10 +196,12 @@ td {
     height: auto;
     object-fit: cover;
 }
+
 /* footer */
 .footer{
     height: 96px;
     width: 100%;
+    font-size: 1.6rem;
     background: #111;
 }
 .copyright{
@@ -206,3 +210,83 @@ td {
     text-align: center;
     padding-top: 38px;
 }
+
+/*responsiviness*/
+@media (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+    .textcard{
+        max-width: 50%;
+    }
+    .photo {
+        width: 50%;
+    }
+    nav{
+        display: none;    
+    }
+    .menu-toggle{
+        position: absolute;
+        display: block;
+        right: 0;
+        margin-top: 27px;
+    }
+    .rowmenu .menu-toggle .one,.two,.three {
+        height: 3px;
+        margin: 5px auto;
+        background-color: #111;
+        transition-duration: 0.3s;
+    }
+    .rowmenu .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin: 30px;
+    }
+    .rowmenu.on{
+        position: absolute;
+        background-color: #757575;        
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    .rowmenu.on .menu-toggle{
+        position: absolute;
+        right: 0;
+        margin: 30px;
+    }
+    .rowmenu.on nav {
+        display: inline;
+        color: #fff;
+    }
+    .rowmenu.on .menu-toggle .one{
+        transform: rotate(45deg) translate(2px, 4px);
+    }
+    .rowmenu.on .menu-toggle .two{
+        opacity: 0;
+    }
+    .rowmenu.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(8px, -10px);
+    }
+    .rowmenu.on .nav {
+        position: absolute;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+    }
+    .socials {
+        margin: 60px 0 0;
+        transform: translate(-5%, 0);
+    }
+    .rowmenu.on .nav li a {
+        font-size: 3rem;
+    }
+}
+
+
+
+
